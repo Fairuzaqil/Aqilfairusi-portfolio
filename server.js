@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -10,7 +11,14 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Konfigurasi Nodemailer (Gmail SMTP)
+// Serve static files
+app.use(express.static(path.join(__dirname)));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// Nodemailer config
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -19,7 +27,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Endpoint untuk menerima form kontak
 app.post("/contact", async (req, res) => {
   const { firstName, lastName, mobile, email, message } = req.body;
 
@@ -27,10 +34,9 @@ app.post("/contact", async (req, res) => {
     return res.status(400).json({ error: "Semua kolom harus diisi!" });
   }
 
-  // Format email yang akan dikirim
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.RECEIVER_EMAIL, // Email tujuan (misal email pribadi)
+    to: process.env.RECEIVER_EMAIL,
     subject: "Pesan Baru dari Website Portfolio",
     text: `
       Nama: ${firstName} ${lastName}
