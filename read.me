@@ -1,0 +1,200 @@
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 1.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 2rem; /* Jarak dari kanan */
+    top: 50%;
+    transform: translateY(-50%); /* Sejajarkan vertikal */
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(
+      18,
+      18,
+      18,
+      0.95
+    ); /* Latar belakang gelap dengan transparansi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.95); /* Pastikan menutup seluruh layar */
+    z-index: -1; /* Taruh di belakang menu */
+  }
+
+  nav ul {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  nav ul li a {
+    font-size: 24px; /* Perbesar teks */
+    font-weight: bold;
+  }
+
+  nav ul li {
+    padding: 15px 0;
+  }
+
+  nav ul.show {
+    right: 0;
+  }
+  nav.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: auto;
+    padding-top: 30px;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-left: 0;
+  }
+  .hero-text p {
+    padding: 0 20px; /* Menambahkan jarak di sisi kanan dan kiri */
+    text-align: justify; /* Membuat teks lebih rapi */
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-image img {
+    max-width: 80%;
+    margin-top: 0;
+  }
+
+  .btn-more {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .service-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .portfolio-container {
+    flex-wrap: wrap;
+  }
+
+  .video-item {
+    flex: 0 1 calc(50% - 20px);
+  }
+
+  .contact-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #services h2,
+  #services span,
+  #portfolio h2,
+  #portfolio span {
+    font-size: 1.8rem;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card-description {
+    font-size: 12px;
+  }
+
+  .video-title {
+    font-size: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+  .contact-section h2 {
+    font-size: 1.8rem; /* Mengecilkan ukuran judul */
+  }
+
+  .contact-section h2 span {
+    font-size: 1.8rem; /* Pastikan ukurannya sama agar proporsional */
+  }
+  .hero-image {
+    position: relative;
+    z-index: 5;
+    max-width: 250px;
+  }
+
+  .glow-circle {
+    width: 100%;
+    max-width: 230px;
+    height: 100%;
+    max-height: 230px;
+    filter: blur(60px);
+  }
+}

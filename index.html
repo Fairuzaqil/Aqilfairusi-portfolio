@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sen:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="portfolio">Portfolio.</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="#home" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about" onclick="closeMenu()">About</a></li>
+          <li><a href="#services" onclick="closeMenu()">Service</a></li>
+          <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h2>Hello It's Me</h2>
+        <h1>Aqil Fairusi</h1>
+        <h3>
+          And I'm a
+          <div id="text" class="typing"></div>
+        </h3>
+        <p>
+          "Saya seorang kreator visual dan pengembang web dengan passion dalam
+          menghadirkan karya yang menarik dan bermakna. Dengan pengalaman dalam
+          editing video sinematik, pembuatan konten kreatif, serta pengembangan
+          antarmuka web yang interaktif dan responsif, saya berkomitmen untuk
+          menciptakan visual dan pengalaman digital yang tidak hanya estetis,
+          tetapi juga fungsional. Saya siap membantu mewujudkan ide menjadi
+          karya nyata yang menginspirasi dan memberikan dampak positif."
+        </p>
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/aqilfairusi/"
+            class="clickable-logo"
+            target="_blank"
+          >
+            <div class="logo-container">
+              <div class="logo">
+                <i class="bi bi-instagram"></i>
+                <!-- Bootstrap Icon Instagram -->
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/aqilfairusi"
+            class="clickable-logo"
+            target="_blank"
+          >
+            <div class="logo-container">
+              <div class="logo">
+                <i class="bi bi-linkedin"></i>
+                <!-- Bootstrap Icon Instagram -->
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.youtube.com/@fairuz_aqil"
+            class="clickable-logo"
+            target="_blank"
+          >
+            <div class="logo-container">
+              <div class="logo">
+                <i class="bi bi-youtube"></i>
+                <!-- Bootstrap Icon Instagram -->
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.facebook.com/aqil.fairusi"
+            class="clickable-logo"
+            target="_blank"
+          >
+            <div class="logo-container">
+              <div class="logo">
+                <i class="bi bi-facebook"></i>
+                <!-- Bootstrap Icon Instagram -->
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://github.com/Fairuzaqil"
+            class="clickable-logo"
+            target="_blank"
+          >
+            <div class="logo-container">
+              <div class="logo">
+                <i class="bi bi-github"></i>
+                <!-- Bootstrap Icon Instagram -->
+              </div>
+            </div>
+          </a>
+        </div>
+        <button class="glow-button" onclick="downloadCV()">Download CV</button>
+      </div>
+      <div class="hero-image">
+        <div class="glow-circle"></div>
+        <!-- Lingkaran glow -->
+        <img src="images/aqil.png" alt="Aqil Fairusi" />
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>About <span>Me</span></h2>
+          <h3>Video Editor | Videographer | Frontend Developer</h3>
+          <p>
+            Saya adalah kreator visual dan pengembang web yang memiliki hasrat
+            dalam menghasilkan karya yang menginspirasi. Dengan pengalaman dalam
+            editing video sinematik, pembuatan konten kreatif, dan pengembangan
+            antarmuka web yang interaktif, saya siap membantu mewujudkan ide
+            menjadi karya nyata.
+          </p>
+          <button class="glow-button">See More</button>
+        </div>
+        <div class="about-image">
+          <div class="outline-circle"></div>
+          <img src="images/aqil.png" alt="Aqil Fairusi" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2 class="our">Our <span>Services</span></h2>
+      <div class="service-container">
+        <div class="card">
+          <div class="card-logo">
+            <i class="bi bi-camera-video"></i>
+            <!-- Bootstrap Icon -->
+          </div>
+          <h2>Video Editor</h2>
+          <p class="card-description">
+            "Saya menawarkan layanan video editing profesional untuk berbagai
+            kebutuhan, mulai dari konten YouTube, video promosi, dokumentasi
+            acara, hingga film pendek. Dengan teknik cutting yang presisi,
+            transisi yang halus, serta efek visual yang menarik, saya memastikan
+            video Anda memiliki kualitas terbaik dan mampu menyampaikan pesan
+            dengan efektif."
+          </p>
+          <button
+            class="read-more"
+            onclick="openModal('Video Editing', 'Saya menawarkan layanan video editing profesional untuk berbagai kebutuhan, mulai dari konten YouTube, video promosi, dokumentasi acara, hingga film pendek. Dengan teknik cutting yang presisi, transisi yang halus, serta efek visual yang menarik, saya memastikan video Anda memiliki kualitas terbaik dan mampu menyampaikan pesan dengan efektif.', ['Cutting & Trimming', 'Color Grading', 'Motion Graphics', 'Sound Design'])"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="card">
+          <div class="card-logo">
+            <i class="bi bi-camera-reels-fill"></i>
+            <!-- Bootstrap Icon -->
+          </div>
+          <h2>Videographer</h2>
+          <p class="card-description">
+            "Saya menyediakan layanan videografi dengan pendekatan sinematik
+            untuk berbagai keperluan seperti event, pernikahan, dokumentasi
+            perusahaan, hingga pembuatan video kreatif. Dengan teknik
+            pengambilan gambar yang profesional, pencahayaan yang optimal, dan
+            storytelling yang kuat, saya menghadirkan visual yang memukau dan
+            penuh emosi."
+          </p>
+          <button
+            class="read-more"
+            onclick="openModal('Videography', 'Saya menyediakan layanan videografi dengan pendekatan sinematik untuk berbagai keperluan seperti event, pernikahan, dokumentasi perusahaan, hingga pembuatan video kreatif. Dengan teknik pengambilan gambar yang profesional, pencahayaan yang optimal, dan storytelling yang kuat, saya menghadirkan visual yang memukau dan penuh emosi.', ['Storyboarding', 'Cinematic Shooting', 'Lighting Setup', 'Post-Production'])"
+          >
+            Read More
+          </button>
+        </div>
+        <div class="card">
+          <div class="card-logo">
+            <i class="bi bi-code-slash"></i>
+            <!-- Bootstrap Icon -->
+          </div>
+          <h2>Frontend Developer</h2>
+          <p class="card-description">
+            "Saya mengembangkan website responsif dan interaktif menggunakan
+            teknologi modern seperti HTML, CSS, dan JavaScript. Dengan
+            pengalaman dalam pengembangan UI/UX, saya memastikan setiap website
+            yang saya buat tidak hanya memiliki desain menarik, tetapi juga
+            optimal dari segi kecepatan, aksesibilitas, dan pengalaman
+            pengguna."
+          </p>
+          <button
+            class="read-more"
+            onclick="openModal('Frontend Development', 'Saya mengembangkan website responsif dan interaktif menggunakan teknologi modern seperti HTML, CSS, dan JavaScript. Dengan pengalaman dalam pengembangan UI/UX, saya memastikan setiap website yang saya buat tidak hanya memiliki desain menarik, tetapi juga optimal dari segi kecepatan, aksesibilitas, dan pengalaman pengguna.', ['HTML & CSS', 'JavaScript', 'React.js', 'UI/UX Optimization'])"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Container -->
+      <div id="service-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+
+          <!-- Tambahan: Daftar keahlian -->
+          <h3 id="modal-skills-title" style="display: none">Keahlian:</h3>
+          <ul id="modal-skills"></ul>
+
+          <button class="modal-button" onclick="closeModal()">Tutup</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h2 class="our">Our <span>Projects</span></h2>
+      <div class="container">
+        <div id="video-list" class="video-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <h2>Contact <span>Me</span></h2>
+      <form class="contact-form" id="contact-form">
+        <div class="input-row">
+          <input
+            type="text"
+            id="first-name"
+            placeholder="First Name"
+            required
+          />
+          <input type="text" id="last-name" placeholder="Last Name" required />
+        </div>
+        <div class="input-row">
+          <input type="text" id="mobile" placeholder="Mob. Number" required />
+          <input type="email" id="email" placeholder="Email Address" required />
+        </div>
+        <textarea
+          id="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" class="glow-button">Submit</button>
+        <p
+          id="form-message"
+          style="display: none; color: #00ccff; margin-top: 10px"
+        ></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Aqil Fairusi. All Rights Reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/aqilfairusi/" target="_blank"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/aqilfairusi" target="_blank"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@fairuz_aqil" target="_blank"
+            ><i class="bi bi-youtube"></i
+          ></a>
+          <a href="https://github.com/Fairuzaqil" target="_blank"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="https://www.facebook.com/aqil.fairusi" target="_blank"
+            ><i class="bi bi-facebook"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function downloadCV() {
+      // Menyediakan path file CV Anda
+      const cvPath = "assets/CV. AQIL FAIRUSI.pdf";
+
+      // Membuat elemen <a> secara dinamis untuk memulai download
+      const link = document.createElement("a");
+      link.href = cvPath;
+      link.download = "CV_Aqil_Fairusi.pdf"; // Menentukan nama file yang diunduh
+      link.click(); // Simulasi klik pada link untuk memulai download
+    }
+  </script>
+  <script>
+    const texts = ["Video Editor.", "Videographer.", "Frontend Developer."];
+    let index = 0;
+    const speed = 100; // Kecepatan pengetikan dalam milidetik
+    const eraseSpeed = 50; // Kecepatan penghapusan karakter
+    const element = document.getElementById("text");
+
+    function typeWriter() {
+      if (index < texts.length) {
+        let charIndex = 0;
+        const currentText = texts[index];
+
+        // Menulis kalimat
+        function write() {
+          if (charIndex < currentText.length) {
+            element.innerHTML += currentText.charAt(charIndex);
+            charIndex++;
+            setTimeout(write, speed);
+          } else {
+            // Setelah menulis selesai, tunggu sejenak lalu hapus
+            setTimeout(eraseWriter, 1000);
+          }
+        }
+
+        // Menghapus kalimat
+        function eraseWriter() {
+          let eraseIndex = currentText.length;
+          function erase() {
+            if (eraseIndex > 0) {
+              element.innerHTML = currentText.substring(0, eraseIndex - 1);
+              eraseIndex--;
+              setTimeout(erase, eraseSpeed);
+            } else {
+              // Setelah menghapus selesai, lanjutkan ke kalimat berikutnya
+              index++;
+              if (index === texts.length) {
+                index = 0; // Reset index untuk looping
+              }
+              setTimeout(typeWriter, 500); // Tunggu sebelum menulis kalimat berikutnya
+            }
+          }
+          erase();
+        }
+
+        write();
+      }
+    }
+
+    typeWriter(); // Mulai animasi pengetikan
+  </script>
+  <script>
+    const videos = [
+      "https://www.youtube.com/watch?v=CHEFM_FO-R8&ab_channel=KPUKabupatenTegal",
+      "https://www.youtube.com/watch?v=PAUt9VgtTVA&ab_channel=KPUKabupatenTegal",
+      "https://www.youtube.com/watch?v=DiZfsuiAt_8&ab_channel=PPMZaenabMasykur",
+      "https://www.youtube.com/watch?v=M5XHU-WcR3M&ab_channel=Afstory",
+      "https://www.youtube.com/watch?v=EDZtDWc4R_M&ab_channel=StupangMedia",
+      "https://www.youtube.com/watch?v=Ov4WlEZ09N4",
+    ];
+
+    // Fungsi untuk mengambil ID video dari URL YouTube
+    function getYouTubeID(url) {
+      const regex = /[?&]v=([^&]+)/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+
+    // Fungsi untuk mengambil data video dari YouTube oEmbed API
+    async function getYouTubeData(videoURL) {
+      const videoID = getYouTubeID(videoURL);
+      if (!videoID) return null;
+
+      const apiURL = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoID}&format=json`;
+
+      try {
+        const response = await fetch(apiURL);
+        const data = await response.json();
+        return {
+          title: data.title,
+          thumbnail: data.thumbnail_url,
+          url: videoURL,
+        };
+      } catch (error) {
+        console.error("Error fetching YouTube data:", error);
+        return null;
+      }
+    }
+
+    // Fungsi untuk cek apakah layar mobile
+    function isMobile() {
+      return window.innerWidth < 768;
+    }
+
+    // Fungsi untuk menampilkan daftar video
+    async function loadVideos() {
+      const videoList = document.getElementById("video-list");
+
+      // ❗❗ FIX UTAMA: Hapus semua elemen anak sebelum menambahkan ulang
+      while (videoList.firstChild) {
+        videoList.removeChild(videoList.firstChild);
+      }
+
+      for (const videoURL of videos) {
+        const videoData = await getYouTubeData(videoURL);
+
+        if (videoData) {
+          const videoItem = document.createElement("div");
+          videoItem.classList.add("video-item");
+
+          if (isMobile()) {
+            // Mode Mobile: Judul & Tombol langsung tampil
+            videoItem.innerHTML = `
+            <img class="video-thumbnail" src="${videoData.thumbnail}" alt="Thumbnail">
+            <p class="video-title">${videoData.title}</p>
+            <a class="watch-button" href="${videoData.url}" target="_blank">Tonton</a>
+          `;
+          } else {
+            // Mode Desktop: Hover untuk menampilkan judul & tombol
+            videoItem.innerHTML = `
+            <img class="video-thumbnail" src="${videoData.thumbnail}" alt="Thumbnail">
+            <div class="video-overlay">
+              <p class="video-title">${videoData.title}</p>
+              <a class="video-link" href="${videoData.url}" target="_blank">
+                <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+            </div>
+          `;
+          }
+
+          videoList.appendChild(videoItem);
+        }
+      }
+    }
+
+    // ❗❗ FIX UTAMA: Hapus event listener resize sebelum menambahkan ulang
+    window.removeEventListener("resize", loadVideos);
+    window.addEventListener("resize", () => {
+      clearTimeout(window.resizeTimeout);
+      window.resizeTimeout = setTimeout(loadVideos, 300); // Tunggu 300ms sebelum reload
+    });
+
+    // Panggil `loadVideos()` saat halaman dimuat pertama kali
+    document.addEventListener("DOMContentLoaded", loadVideos);
+  </script>
+
+  <script>
+    document.querySelectorAll("nav a").forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: targetElement.offsetTop - 50, // Sesuaikan jika ada navbar tetap (fixed)
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector("nav");
+      menu.classList.toggle("show");
+    }
+
+    function closeMenu() {
+      document.querySelector("nav").classList.remove("show");
+    }
+
+    // Tutup menu jika klik di latar belakang navigasi
+    document.querySelector("nav").addEventListener("click", function (event) {
+      const navLinks = document.getElementById("nav-links");
+
+      // Jika yang diklik adalah bagian luar menu (bukan daftar menu), tutup menu
+      if (!navLinks.contains(event.target)) {
+        closeMenu();
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      closeModal(); // Tutup modal saat halaman direfresh
+    });
+
+    function openModal(title, description, skills = []) {
+      document.getElementById("modal-title").textContent = title;
+      document.getElementById("modal-description").textContent = description;
+
+      // Ambil elemen daftar keahlian
+      const skillList = document.getElementById("modal-skills");
+      const skillTitle = document.getElementById("modal-skills-title");
+
+      // Kosongkan daftar sebelum menambahkan item baru
+      skillList.innerHTML = "";
+
+      if (skills.length > 0) {
+        skillTitle.style.display = "block"; // Tampilkan judul keahlian
+        skills.forEach((skill) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = skill;
+          skillList.appendChild(listItem);
+        });
+      } else {
+        skillTitle.style.display = "none"; // Sembunyikan jika tidak ada keahlian
+      }
+
+      document.getElementById("service-modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("service-modal").style.display = "none";
+    }
+
+    // Tutup modal jika klik di luar modal
+    window.onclick = function (event) {
+      const modal = document.getElementById("service-modal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const descriptions = document.querySelectorAll(".card-description");
+      const minLength = 80; // Panjang minimal deskripsi
+
+      descriptions.forEach((desc) => {
+        let text = desc.textContent.trim();
+
+        if (text.length < minLength) {
+          let extraDots = ".".repeat((minLength - text.length) / 4); // Tambahkan titik agar terlihat panjang
+          desc.textContent = text + " " + extraDots + "...";
+        }
+      });
+    });
+  </script>
+
+  <script>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", async function (event) {
+        event.preventDefault(); // Mencegah reload halaman saat submit
+
+        // Ambil nilai input
+        const firstName = document.getElementById("first-name").value.trim();
+        const lastName = document.getElementById("last-name").value.trim();
+        const mobile = document.getElementById("mobile").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const formMessage = document.getElementById("form-message");
+
+        // Validasi input
+        if (!firstName || !lastName || !mobile || !email || !message) {
+          formMessage.textContent = "Semua kolom harus diisi!";
+          formMessage.style.color = "red";
+          formMessage.style.display = "block";
+          return;
+        }
+
+        // Kirim data ke backend
+        const formData = { firstName, lastName, mobile, email, message };
+
+        try {
+          const response = await fetch("http://localhost:5001/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+            formMessage.textContent = "Pesan Anda telah dikirim!";
+            formMessage.style.color = "#00ccff";
+          } else {
+            formMessage.textContent = "Terjadi kesalahan, coba lagi nanti.";
+            formMessage.style.color = "red";
+          }
+        } catch (error) {
+          formMessage.textContent = "Gagal menghubungi server.";
+          formMessage.style.color = "red";
+        }
+
+        formMessage.style.display = "block";
+
+        // Reset form setelah 2 detik
+        setTimeout(() => {
+          document.getElementById("contact-form").reset();
+          formMessage.style.display = "none";
+        }, 2000);
+      });
+  </script>
+</html>
