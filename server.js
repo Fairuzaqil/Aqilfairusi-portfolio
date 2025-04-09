@@ -2,12 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const path = require("path");
 const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// Setup CORS agar bisa menerima request dari domain manapun (atau kamu bisa ganti ke domain spesifik)
+// Middleware
 app.use(
   cors({
     origin: "*",
@@ -15,15 +16,15 @@ app.use(
     allowedHeaders: ["Content-Type"],
   })
 );
-
 app.use(bodyParser.json());
 
-// Endpoint testing biar gak error "CANNOT GET /"
+// ✅ Serve frontend dari folder 'public'
+app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
-  res.send("Server berjalan dan siap menerima request!");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// Setup nodemailer
+// ✅ Email config pakai Nodemailer
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -32,7 +33,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Endpoint untuk form contact
+// ✅ Endpoint POST untuk form kontak
 app.post("/contact", async (req, res) => {
   const { firstName, lastName, mobile, email, message } = req.body;
 
@@ -62,6 +63,7 @@ app.post("/contact", async (req, res) => {
   }
 });
 
+// ✅ Jalankan server
 app.listen(PORT, () => {
   console.log(`Server berjalan di http://localhost:${PORT}`);
 });
