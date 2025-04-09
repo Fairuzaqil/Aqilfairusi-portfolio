@@ -1,14 +1,13 @@
 {
-  "name": "lat2-copy",
+  "name": "portfolio-saya",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Website portfolio dengan backend Express untuk contact form",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Aqil Fairusi",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
