@@ -3,22 +3,27 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(cors());
+// Setup CORS agar bisa menerima request dari domain manapun (atau kamu bisa ganti ke domain spesifik)
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+
 app.use(bodyParser.json());
 
-// Serve static files
-app.use(express.static(path.join(__dirname)));
-
+// Endpoint testing biar gak error "CANNOT GET /"
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.send("Server berjalan dan siap menerima request!");
 });
 
-// Nodemailer config
+// Setup nodemailer
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -27,6 +32,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// Endpoint untuk form contact
 app.post("/contact", async (req, res) => {
   const { firstName, lastName, mobile, email, message } = req.body;
 
@@ -56,6 +62,6 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-app.listen(PORT, () =>
-  console.log(`Server berjalan di http://localhost:${PORT}`)
-);
+app.listen(PORT, () => {
+  console.log(`Server berjalan di http://localhost:${PORT}`);
+});
