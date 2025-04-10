@@ -146,7 +146,7 @@ async function loadVideos() {
 window.removeEventListener("resize", loadVideos);
 window.addEventListener("resize", () => {
   clearTimeout(window.resizeTimeout);
-  window.resizeTimeout = setTimeout(loadVideos, 300); // Tunggu 300ms sebelum reload
+  window.resizeTimeout = setTimeout(loadVideos, 10000); // Tunggu 300ms sebelum reload
 });
 
 // Panggil `loadVideos()` saat halaman dimuat pertama kali
