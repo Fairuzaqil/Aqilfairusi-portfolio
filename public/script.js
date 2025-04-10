@@ -55,17 +55,6 @@ function typeWriter() {
   }
 }
 
-function toggleAbout(event) {
-  const extraAbout = document.getElementById("extra-about");
-  const btn = event.target;
-  if (extraAbout.classList.contains("hidden")) {
-    extraAbout.classList.remove("hidden");
-    btn.textContent = "See Less";
-  } else {
-    extraAbout.classList.add("hidden");
-    btn.textContent = "See More";
-  }
-}
 
 typeWriter(); // Mulai animasi pengetikan
 

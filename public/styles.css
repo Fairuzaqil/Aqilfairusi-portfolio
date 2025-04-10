@@ -216,10 +216,6 @@ nav ul li a:hover {
   min-height: 70vh;
 }
 
-.hidden {
-  display: none;
-}
-
 .about-container {
   display: flex;
   align-items: center;
