@@ -55,7 +55,7 @@ function typeWriter() {
   }
 }
 
-function toggleAbout() {
+function toggleAbout(event) {
   const extraAbout = document.getElementById("extra-about");
   const btn = event.target;
   if (extraAbout.classList.contains("hidden")) {
