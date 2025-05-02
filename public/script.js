@@ -1,6 +1,6 @@
 function downloadCV() {
   // Menyediakan path file CV Anda
-  const cvPath = "assets/CV. AQIL FAIRUSI.pdf";
+  const cvPath = "assets/CV_Aqil_Fairusi.pdf";
 
   // Membuat elemen <a> secara dinamis untuk memulai download
   const link = document.createElement("a");
@@ -55,9 +55,7 @@ function typeWriter() {
   }
 }
 
-
 typeWriter(); // Mulai animasi pengetikan
-
 
 const videos = [
   "https://www.youtube.com/watch?v=CHEFM_FO-R8&ab_channel=KPUKabupatenTegal",
@@ -146,7 +144,7 @@ async function loadVideos() {
 window.removeEventListener("resize", loadVideos);
 window.addEventListener("resize", () => {
   clearTimeout(window.resizeTimeout);
-  window.resizeTimeout = setTimeout(loadVideos, 10000); // Tunggu 300ms sebelum reload
+  window.resizeTimeout = setTimeout(loadVideos, 5000); // Tunggu 5s sebelum reload
 });
 
 // Panggil `loadVideos()` saat halaman dimuat pertama kali
