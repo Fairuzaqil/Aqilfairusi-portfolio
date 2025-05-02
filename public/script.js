@@ -1,13 +1,14 @@
 function downloadCV() {
-  // Menyediakan path file CV Anda
-  const cvPath = "assets/CV_Aqil_Fairusi.pdf";
-
-  // Membuat elemen <a> secara dinamis untuk memulai download
+  const cvPath =
+    "https://github.com/Fairuzaqil/portfolio-saya/raw/main/assets/CV_Aqil_Fairusi.pdf"; // Pastikan ini path yang benar
   const link = document.createElement("a");
   link.href = cvPath;
-  link.download = "CV_Aqil_Fairusi.pdf"; // Menentukan nama file yang diunduh
-  link.click(); // Simulasi klik pada link untuk memulai download
+  link.download = "CV_Aqil_Fairusi.pdf"; // Nama file yang didownload
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
+
 const texts = ["Video Editor.", "Videographer.", "Frontend Developer."];
 let index = 0;
 const speed = 100; // Kecepatan pengetikan dalam milidetik
